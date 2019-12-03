@@ -13,6 +13,7 @@ app.secret_key = 'y337kGcys&zP3B'
 
 class Blog(db.Model):
 
+    id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(120))
     body = db.Column(db.String(1000))
 
@@ -39,7 +40,8 @@ def main():
             
 
 
-
+#WILL NEED ID - USE ID, INCRIMENT BY 1 AT END OF PRINTING OUT MAIN FORM,
+#AND MAKE LINKS USE A GET FEATURE TO OPEN CORRECT PAGE/BLOG
 
 
 
