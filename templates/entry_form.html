@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+    {% block content %}
+
+    <p>dab dab dab entry form</p>
+
+    <form action='/new_post' method="post">
+
+        <label for=title>Give it a title!</label>
+        <input type=text , name=title> 
+        <label for=body>what do you want to say?</label>
+        <input type=form, name = body>
+        <input type="submit", value="submit">
+
+    </form>
+
+
+    {% endblock %}
