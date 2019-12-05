@@ -3,13 +3,17 @@
     {% block content %}
 
     <p>dab dab dab entry form</p>
+    <style>
+        .error {color: red; }
+    </style>
+    <form action='/blog_view' method="POST">
 
-    <form action='/new_post' method="post">
-
-        <label for=title>Give it a title!</label>
-        <input type=text , name=title> 
-        <label for=body>what do you want to say?</label>
-        <input type=form, name = body>
+        <label for=title>Give it a title!</label><br>
+        <input type=text name=title size="50">
+        <span class="error">{{title_error}}</span><br>
+        <label for=body>what do you want to say?</label><br>
+        <input type=text name = body size="50" style="height:200px">
+        <span class="error">{{body_error}}</span><br>
         <input type="submit", value="submit">
 
     </form>

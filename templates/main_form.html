@@ -2,15 +2,26 @@
 
     {% block content %}
 
-    <p>test test test</p>
+    <p>WELCOME TO BLOG LAND!</p>
+    
+
+    <!--for post in blogs - form, clickable title, body, break line{}-->
+    
+    {% for post in bloglist: %}
+        <form action="/blog_view" method="GET">
+            <h2>{{post.title}}</h2>
+            <h4>{{post.body}}</h4>
+            <input type="hidden"name=id value="{{post.id}}"/>
+            <input type="submit", value="go to post">
+            <hr style="border: 2px solid black;" />
+</form>
+        </form> 
+    {% endfor %}
+    
+        <!--<hr style="border: 2px solid black;" />-->
+      
+
 
     
-            
-
-
-    <form action ="/new_post">
-    <input type="submit", value="go to entry form">
-    </form>
-
 
     {% endblock %}
