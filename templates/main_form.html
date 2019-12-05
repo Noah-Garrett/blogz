@@ -9,11 +9,11 @@
     
     {% for post in bloglist: %}
         <form action="/blog_view" method="GET">
-            <h2>{{post.title}}</h2>
+            <h2><a href="/blog_view?id={{post.id}}">{{post.title}}</a></h2>
             <h4>{{post.body}}</h4>
             <input type="hidden"name=id value="{{post.id}}"/>
-            <input type="submit", value="go to post">
-            <hr style="border: 2px solid black;" />
+            <!--<input type="submit", value="go to post">-->
+            <hr style="border: 1px solid black;" />
 </form>
         </form> 
     {% endfor %}
